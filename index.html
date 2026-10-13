@@ -3,232 +3,881 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#010103" />
+  <meta name="theme-color" content="#020205" />
   <title>Kenji Lifts</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Embedded Neon Flexing Bicep Icon for Phone Shortcuts, Favicon & Apple Touch -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='130' fill='%2305050a'/%3E%3Cpath d='M150 370 c-15-5 -28-18 -32-34 -3-11 -1-24 5-34 5-9 14-16 25-20 6-2 12-7 14-13 4-11 15-20 28-22 9-2 18 1 25 7 8 8 19 11 30 9 14-3 27-14 31-28 6-18 20-33 38-39 21-8 45-2 60 14 12 13 29 19 46 16 19-4 35-18 40-37 3-10 10-18 20-22 13-5 28-2 37 8 10 11 12 28 5 41 -6 11 -15 20 -26 25 -10 4 -16 14 -16 25 0 16 9 30 23 37 13 6 22 19 23 34 1 18 -11 34 -28 39 -11 3 -20 12 -23 23 -4 14 -16 24 -31 25 -12 1 -23-5 -30-14 -7-9 -18-14 -29-14 -14 0 -27 8 -33 20 -7 13 -20 21 -35 21 -14 0 -27-7 -34-19 -6-10 -17-17 -29-17 -14 0 -27 8 -33 20 -7 14 -22 22 -38 21 -13-1 -25-9 -31-21z' fill='none' stroke='%23a855f7' stroke-width='18' stroke-linecap='round' stroke-linejoin='round' filter='drop-shadow(0 0 16px %2322d3ee)'/%3E%3Cpath d='M230 270 C240 230 275 205 315 215 C345 222 365 245 370 275' fill='none' stroke='%2322d3ee' stroke-width='22' stroke-linecap='round'/%3E%3Cpath d='M370 275 C375 320 345 355 300 355 C260 355 230 330 220 290' fill='none' stroke='%23c084fc' stroke-width='22' stroke-linecap='round'/%3E%3Cpath d='M315 215 C335 190 375 190 395 215' fill='none' stroke='%2338bdf8' stroke-width='20' stroke-linecap='round'/%3E%3Ccircle cx='360' cy='245' r='12' fill='%2322d3ee'/%3E%3C/svg%3E" />
-  
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='130' fill='%2305050a'/%3E%3Cpath d='M230 270 C240 230 275 205 315 215 C345 222 365 245 370 275' fill='none' stroke='%2322d3ee' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M370 275 C375 320 345 355 300 355 C260 355 230 330 220 290' fill='none' stroke='%23c084fc' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M315 215 C335 190 375 190 395 215' fill='none' stroke='%2338bdf8' stroke-width='22' stroke-linecap='round'/%3E%3Ccircle cx='360' cy='245' r='14' fill='%2322d3ee'/%3E%3C/svg%3E" />
-
-  <!-- Web App Manifest for Android PWA Shortcut Generation -->
-  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Kenji%20Lifts%22%2C%22short_name%22%3A%22KenjiLifts%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23010103%22%2C%22theme_color%22%3A%22%23010103%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%253E%253Crect%20width%3D'512'%20height%3D'512'%20rx%3D'130'%20fill%3D'%252305050a'%2F%253E%253Cpath%20d%3D'M230%20270%20C240%20230%20275%20205%20315%20215%20C345%20222%20365%20245%20370%20275'%20fill%3D'none'%20stroke%3D'%252322d3ee'%20stroke-width%3D'24'%20stroke-linecap%3D'round'%2F%253E%253Cpath%20d%3D'M370%20275%20C375%20320%20345%20355%20300%20355%20C260%20355%20230%20330%20220%20290'%20fill%3D'none'%20stroke%3D'%2523c084fc'%20stroke-width%3D'24'%20stroke-linecap%3D'round'%2F%253E%253Cpath%20d%3D'M315%20215%20C335%20190%20375%20190%20395%20215'%20fill%3D'none'%20stroke%3D'%252338bdf8'%20stroke-width%3D'22'%20stroke-linecap%3D'round'%2F%253E%253Ccircle%20cx%3D'360'%20cy%3D'245'%20r%3D'14'%20fill%3D'%252322d3ee'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D" />
+  <link id="app-favicon" rel="icon" type="image/png" href="" />
+  <link id="app-apple-icon" rel="apple-touch-icon" href="" />
 
   <style>
-    :root {
-      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-      --smooth: cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
     body {
-      background-color: #010103;
-      color: #e2e8f0;
+      background-color: #020205;
+      color: #f1f5f9;
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
       -webkit-tap-highlight-color: transparent;
       overflow-x: hidden;
       min-height: 100vh;
     }
 
-    /* Moody Liquid Aurora Background */
     .aurora-bg {
       position: fixed;
       inset: 0;
       overflow: hidden;
       pointer-events: none;
       z-index: 0;
-      background: #010103;
+      background: #020205;
     }
 
     .morph-blob {
       position: absolute;
-      filter: blur(85px);
-      opacity: 0.28;
-      will-change: transform, border-radius;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.25;
+      pointer-events: none;
     }
 
     .blob-1 {
-      width: 340px;
-      height: 340px;
-      background: radial-gradient(circle, #581c87 0%, #3b0764 55%, transparent 80%);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, #7e22ce 0%, #3b0764 70%, transparent 100%);
       top: 2%;
       right: -80px;
-      animation: liquidMorph1 16s ease-in-out infinite alternate;
     }
 
     .blob-2 {
-      width: 380px;
+      width: 340px;
       height: 340px;
-      background: radial-gradient(circle, #0e7490 0%, #1e1b4b 65%, transparent 85%);
-      top: 38%;
-      left: -110px;
-      animation: liquidMorph2 20s ease-in-out infinite alternate;
+      background: radial-gradient(circle, #0891b2 0%, #1e1b4b 70%, transparent 100%);
+      top: 40%;
+      left: -100px;
     }
 
-    .blob-3 {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, #701a75 0%, #311042 60%, transparent 80%);
-      bottom: 5%;
-      right: -60px;
-      animation: liquidMorph1 22s ease-in-out infinite alternate-reverse;
-    }
-
-    @keyframes liquidMorph1 {
-      0% {
-        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-      50% {
-        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-        transform: translate(-35px, 40px) rotate(40deg) scale(1.08);
-      }
-      100% {
-        border-radius: 35% 65% 31% 69% / 57% 59% 41% 43%;
-        transform: translate(20px, -25px) rotate(80deg) scale(0.95);
-      }
-    }
-
-    @keyframes liquidMorph2 {
-      0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        transform: translate(0, 0) rotate(0deg) scale(1);
-      }
-      50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        transform: translate(45px, -30px) rotate(-35deg) scale(1.12);
-      }
-      100% {
-        border-radius: 55% 45% 65% 35% / 40% 65% 35% 60%;
-        transform: translate(-15px, 35px) rotate(-70deg) scale(0.96);
-      }
-    }
-
-    /* Smoked Obsidian Frosted Glass Card */
     .glass-card {
-      position: relative;
-      background: linear-gradient(
-        135deg,
-        rgba(18, 20, 32, 0.72) 0%,
-        rgba(9, 10, 16, 0.84) 100%
-      );
-      backdrop-filter: blur(40px) saturate(160%);
-      -webkit-backdrop-filter: blur(40px) saturate(160%);
-      border-top: 1px solid rgba(255, 255, 255, 0.13);
-      border-left: 1px solid rgba(255, 255, 255, 0.09);
-      border-right: 1px solid rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      box-shadow:
-        0 24px 50px -12px rgba(0, 0, 0, 0.9),
-        inset 0 1px 0.5px 0 rgba(255, 255, 255, 0.14);
-      transition: transform 0.35s var(--spring), border-radius 0.35s var(--smooth), box-shadow 0.35s var(--smooth), border-color 0.3s ease;
+      background: rgba(15, 17, 26, 0.78);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      border-left: 1px solid rgba(255, 255, 255, 0.10);
+      border-right: 1px solid rgba(255, 255, 255, 0.04);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.9);
     }
 
-    /* Recessed Wells */
     .glass-well {
-      background: rgba(3, 4, 8, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.04);
-      transition: all 0.3s var(--smooth);
+      background: rgba(5, 6, 12, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.7);
     }
 
-    /* Floating Bars */
     .glass-bar {
-      background: rgba(8, 9, 15, 0.82);
-      backdrop-filter: blur(36px) saturate(170%);
-      -webkit-backdrop-filter: blur(36px) saturate(170%);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.95),
-        inset 0 1px 0.5px rgba(255, 255, 255, 0.15);
+      background: rgba(10, 12, 20, 0.88);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
     }
 
-    .btn-moody-primary {
-      background: linear-gradient(135deg, rgba(88, 28, 135, 0.55) 0%, rgba(15, 23, 42, 0.85) 50%, rgba(14, 116, 144, 0.55) 100%);
-      border: 1px solid rgba(168, 85, 247, 0.35);
-      box-shadow: 
-        0 12px 30px -6px rgba(0, 0, 0, 0.8),
-        0 0 20px rgba(139, 92, 246, 0.12),
-        inset 0 1px 1px rgba(255, 255, 255, 0.18);
+    .btn-action {
+      background: linear-gradient(135deg, rgba(126, 34, 206, 0.7) 0%, rgba(14, 116, 144, 0.7) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(126, 34, 206, 0.25);
     }
 
-    .morph-btn {
-      transition: transform 0.3s var(--spring), border-radius 0.3s var(--smooth), background 0.3s ease, border-color 0.3s ease;
-    }
-    .morph-btn:active {
-      transform: scale(0.93);
-      border-radius: 22px;
-    }
-
-    .stepper-btn {
-      transition: transform 0.28s var(--spring), border-radius 0.28s var(--smooth), background 0.2s ease;
-    }
-    .stepper-btn:active {
-      transform: scale(0.82);
-      border-radius: 50%;
-      background: rgba(168, 85, 247, 0.35);
-      border-color: rgba(34, 211, 238, 0.5);
-      color: #ffffff;
-    }
-
-    .tab-pane {
-      transition: opacity 0.35s var(--smooth), transform 0.38s var(--spring);
-    }
-
-    @keyframes setMorphIn {
-      0% {
-        opacity: 0;
-        transform: translateY(14px) scale(0.95);
-        border-radius: 34px;
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        border-radius: 18px;
-      }
-    }
-    .animate-set-in {
-      animation: setMorphIn 0.4s var(--spring) forwards;
-    }
-
-    @keyframes overloadPulse {
-      0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.12), inset 0 1px 0.5px rgba(255, 255, 255, 0.15); }
-      50% { box-shadow: 0 0 25px rgba(168, 85, 247, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.25); }
-    }
-    .overload-glow {
-      animation: overloadPulse 3.2s infinite ease-in-out;
+    .btn-action:active {
+      transform: scale(0.97);
     }
   </style>
 </head>
 <body class="pb-32">
 
-  <!-- Moody Aurora Background -->
   <div class="aurora-bg">
     <div class="morph-blob blob-1"></div>
     <div class="morph-blob blob-2"></div>
-    <div class="morph-blob blob-3"></div>
   </div>
 
-  <!-- Sticky Frosted Header with Neon Flexing Bicep -->
-  <header class="glass-bar sticky top-0 z-40 px-4 py-3.5 flex justify-between items-center border-t-0 border-x-0">
+  <!-- Header -->
+  <header class="glass-bar sticky top-0 z-40 px-4 py-3 flex justify-between items-center">
     <div class="flex items-center gap-3">
-      
-      <!-- Neon Flexing Bicep Badge -->
-      <div class="w-10 h-10 rounded-2xl glass-card flex items-center justify-center border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.25)]">
-        <svg class="w-6 h-6 text-purple-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Stylized flexing bicep & arm contour -->
-          <path d="M4 16c.8-2.5 3-4 6-4 1.5 0 2.5.5 3.5 1.5 1.5-2.2 4-3.5 7-3.5 1 0 2 .2 2.8.6" stroke="#c084fc"/>
-          <path d="M7 17.5c2.5 1.5 5 1.5 8 0 1.5-.7 3-1.8 4.2-3.2.8-1 1.8-1.8 2.8-2.3" stroke="#22d3ee"/>
-          <!-- Flexed Bicep Peak Arc -->
-          <path d="M12.5 11c1-1.8 2.8-3 5-3 2 0 3.8 1 4.5 2.5" stroke="#38bdf8" stroke-width="2.2"/>
-          <circle cx="16.5" cy="11.5" r="1.5" fill="#22d3ee" stroke="none"/>
-        </svg>
+      <canvas id="logo-canvas" width="40" height="40" class="w-10 h-10 rounded-2xl border border-purple-500/30 shadow-md"></canvas>
+      <div>
+        <h1 class="text-base font-extrabold tracking-wider text-slate-100">KENJI LIFTS</h1>
+        <p id="user-stats-banner" class="text-[10px] text-slate-400 font-semibold tracking-widest uppercase">BW: -- kg</p>
+      </div>
+    </div>
+    
+    <button onclick="toggleTimerModal()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-card text-[10px] font-extrabold text-cyan-400 tracking-wider">
+      <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="timer-display">REST</span>
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-4 max-w-md mx-auto space-y-4 relative z-10">
+
+    <!-- TAB 1: WORKOUT LOGGING -->
+    <section id="tab-log" class="space-y-4">
+      <div class="space-y-2">
+        <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block pl-1">Workout Split</label>
+        <div class="grid grid-cols-2 gap-2" id="split-buttons"></div>
       </div>
 
-      <div>
-        <h1 class="text-base
+      <div class="space-y-2">
+        <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block pl-1">Selected Exercise</label>
+        <div class="relative">
+          <select id="exercise-select" onchange="renderExerciseDetails()" class="w-full appearance-none glass-card rounded-2xl px-4 py-3 text-sm font-bold text-slate-100 focus:outline-none pr-10"></select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercise Card -->
+      <div class="glass-card rounded-3xl p-5 space-y-4">
+        <div class="flex justify-between items-center">
+          <span id="target-muscle-badge" class="text-[10px] font-extrabold px-3 py-1 rounded-full bg-purple-950/60 text-purple-300 border border-purple-500/30 tracking-widest uppercase">CHEST</span>
+          <span id="lift-rating-badge" class="text-xs font-extrabold text-cyan-400 tracking-wide">Rating: --</span>
+        </div>
+
+        <div class="glass-well p-3.5 rounded-2xl text-[11px] leading-relaxed">
+          <span class="text-slate-400 font-bold tracking-widest uppercase block mb-1">Previous Session</span>
+          <p id="prev-log-display" class="text-slate-300 italic">No logged lifts for this exercise.</p>
+        </div>
+
+        <!-- Steppers -->
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="glass-well p-3 rounded-2xl space-y-1.5">
+              <label class="text-[10px] font-bold text-slate-400 block text-center uppercase tracking-widest">Weight (kg)</label>
+              <div class="flex items-center justify-between">
+                <button onclick="adjustInput('input-weight', -2.5)" class="w-8 h-8 rounded-xl glass-card text-slate-200 font-bold text-base flex items-center justify-center active:scale-90">-</button>
+                <input type="number" id="input-weight" placeholder="0" step="0.5" class="w-full bg-transparent text-center font-black text-xl text-slate-100 focus:outline-none" />
+                <button onclick="adjustInput('input-weight', 2.5)" class="w-8 h-8 rounded-xl glass-card text-slate-200 font-bold text-base flex items-center justify-center active:scale-90">+</button>
+              </div>
+            </div>
+
+            <div class="glass-well p-3 rounded-2xl space-y-1.5">
+              <label class="text-[10px] font-bold text-slate-400 block text-center uppercase tracking-widest">Reps</label>
+              <div class="flex items-center justify-between">
+                <button onclick="adjustInput('input-reps', -1)" class="w-8 h-8 rounded-xl glass-card text-slate-200 font-bold text-base flex items-center justify-center active:scale-90">-</button>
+                <input type="number" id="input-reps" placeholder="0" class="w-full bg-transparent text-center font-black text-xl text-cyan-300 focus:outline-none" />
+                <button onclick="adjustInput('input-reps', 1)" class="w-8 h-8 rounded-xl glass-card text-slate-200 font-bold text-base flex items-center justify-center active:scale-90">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="logCurrentSet()" class="btn-action w-full text-slate-100 font-black py-3.5 rounded-2xl text-xs tracking-widest uppercase transition">
+            Log Set
+          </button>
+        </div>
+      </div>
+
+      <!-- Active Sets -->
+      <div class="space-y-3 pt-1">
+        <div class="flex justify-between items-center px-1">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Active Workout Sets</span>
+          <span id="session-count" class="text-purple-300 font-black text-xs">0 sets</span>
+        </div>
+
+        <div id="session-sets-list" class="space-y-2 text-xs"></div>
+
+        <div id="finish-workout-container" class="pt-2 hidden">
+          <button onclick="finishWorkoutSession()" class="w-full py-3.5 rounded-2xl bg-cyan-950/80 border border-cyan-500/40 text-cyan-200 font-black text-xs tracking-widest uppercase shadow-lg active:scale-95 transition">
+            ✓ Complete & Save Workout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: HISTORY -->
+    <section id="tab-history" class="space-y-4 hidden">
+      <div class="grid grid-cols-2 gap-2 glass-card p-1.5 rounded-2xl">
+        <button onclick="switchHistorySubTab('workouts')" id="subtab-workouts-btn" class="py-2 rounded-xl text-xs font-extrabold bg-purple-950/80 text-purple-200 border border-purple-500/40">Past Workouts</button>
+        <button onclick="switchHistorySubTab('overload')" id="subtab-overload-btn" class="py-2 rounded-xl text-xs font-bold text-slate-400">Exercise Progress</button>
+      </div>
+
+      <div id="view-past-workouts" class="space-y-3">
+        <div id="past-workouts-list" class="space-y-3"></div>
+      </div>
+
+      <div id="view-overload-timeline" class="space-y-4 hidden">
+        <div class="relative">
+          <select id="history-filter" onchange="renderHistory()" class="w-full appearance-none glass-card rounded-2xl px-4 py-3 text-xs font-bold text-slate-100 focus:outline-none pr-10"></select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-purple-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+        <div id="history-timeline" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: VOLUME -->
+    <section id="tab-analytics" class="space-y-4 hidden">
+      <h2 class="text-sm font-extrabold text-slate-200 uppercase tracking-widest pl-1">Volume & Distribution</h2>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="glass-card p-4 rounded-3xl">
+          <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Total Volume</span>
+          <p id="stat-total-volume" class="text-lg font-black text-cyan-300 mt-1.5">0 kg</p>
+        </div>
+        <div class="glass-card p-4 rounded-3xl">
+          <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Total Sets</span>
+          <p id="stat-total-sets" class="text-lg font-black text-purple-300 mt-1.5">0</p>
+        </div>
+      </div>
+
+      <div class="glass-card p-5 rounded-3xl space-y-4">
+        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Primary Muscle Load</h3>
+        <div id="muscle-breakdown" class="space-y-3.5"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: PROFILE -->
+    <section id="tab-profile" class="space-y-4 hidden">
+      <h2 class="text-sm font-extrabold text-slate-200 uppercase tracking-widest pl-1">Biometrics & Backups</h2>
+      <div class="glass-card p-5 rounded-3xl space-y-4">
+        <div>
+          <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1.5">Body Weight (kg)</label>
+          <input type="number" id="input-bw" placeholder="0" step="0.5" class="w-full glass-well rounded-2xl p-3 text-sm font-bold text-slate-100 focus:outline-none" />
+        </div>
+        <div>
+          <label class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block mb-1.5">Height (cm)</label>
+          <input type="number" id="input-height" placeholder="0" class="w-full glass-well rounded-2xl p-3 text-sm font-bold text-slate-100 focus:outline-none" />
+        </div>
+        <button onclick="saveUserProfile()" class="btn-action w-full text-slate-100 font-black py-3 rounded-2xl text-xs tracking-widest uppercase">
+          Update Biometrics
+        </button>
+      </div>
+
+      <div class="glass-card p-5 rounded-3xl space-y-4">
+        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest pl-1">Data Backup</h3>
+        <div class="grid grid-cols-2 gap-2.5">
+          <button onclick="exportData()" class="glass-well py-2.5 rounded-2xl text-xs font-bold text-slate-300 hover:text-white">Export JSON</button>
+          <button onclick="document.getElementById('import-file').click()" class="glass-well py-2.5 rounded-2xl text-xs font-bold text-slate-300 hover:text-white">Import JSON</button>
+          <input type="file" id="import-file" onchange="importData(event)" class="hidden" accept=".json" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rest Stopwatch Modal -->
+  <div id="timer-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+    <div class="glass-card rounded-3xl p-6 w-full max-w-xs text-center space-y-4">
+      <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Recovery Countdown</h3>
+      <div id="modal-timer-countdown" class="text-5xl font-black text-slate-100 tracking-wider">00:00</div>
+      <div class="grid grid-cols-3 gap-2">
+        <button onclick="startRestTimer(60)" class="glass-well py-2 rounded-xl text-xs font-bold text-slate-300">60s</button>
+        <button onclick="startRestTimer(90)" class="glass-well py-2 rounded-xl text-xs font-bold text-cyan-400 border border-cyan-500/30">90s</button>
+        <button onclick="startRestTimer(120)" class="glass-well py-2 rounded-xl text-xs font-bold text-slate-300">120s</button>
+      </div>
+      <button onclick="toggleTimerModal()" class="w-full py-2 text-xs font-extrabold text-slate-400 hover:text-white uppercase tracking-widest">Dismiss</button>
+    </div>
+  </div>
+
+  <!-- Bottom Floating Dock -->
+  <nav class="fixed bottom-4 left-4 right-4 max-w-md mx-auto glass-bar rounded-3xl p-2 z-40 flex justify-around items-center">
+    <button onclick="switchTab('log')" id="nav-log" class="flex flex-col items-center gap-1 text-purple-300 bg-purple-950/60 border border-purple-500/30 rounded-2xl py-1.5 px-4">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M12 4v16m8-8H4"/></svg>
+      <span class="text-[9px] font-bold uppercase tracking-wider">Log</span>
+    </button>
+    <button onclick="switchTab('history')" id="nav-history" class="flex flex-col items-center gap-1 text-slate-400 py-1.5 px-4 rounded-2xl">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+      <span class="text-[9px] font-bold uppercase tracking-wider">History</span>
+    </button>
+    <button onclick="switchTab('analytics')" id="nav-analytics" class="flex flex-col items-center gap-1 text-slate-400 py-1.5 px-4 rounded-2xl">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <span class="text-[9px] font-bold uppercase tracking-wider">Volume</span>
+    </button>
+    <button onclick="switchTab('profile')" id="nav-profile" class="flex flex-col items-center gap-1 text-slate-400 py-1.5 px-4 rounded-2xl">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+      <span class="text-[9px] font-bold uppercase tracking-wider">Profile</span>
+    </button>
+  </nav>
+
+  <script>
+    // Generate Neon Bicep Canvas Icon
+    function drawNeonBicep(canvas) {
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+
+      ctx.fillStyle = '#090a12';
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.save();
+      ctx.translate(w * 0.1, h * 0.08);
+      ctx.scale(w / 45, h / 45);
+
+      ctx.shadowColor = '#06b6d4';
+      ctx.shadowBlur = 6;
+      ctx.strokeStyle = '#22d3ee';
+      ctx.lineWidth = 3.2;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+
+      // Forearm & Fist
+      ctx.beginPath();
+      ctx.moveTo(8, 26);
+      ctx.quadraticCurveTo(12, 19, 18, 17);
+      ctx.quadraticCurveTo(24, 15, 27, 10);
+      ctx.stroke();
+
+      // Bicep Curve
+      ctx.shadowColor = '#c084fc';
+      ctx.strokeStyle = '#c084fc';
+      ctx.beginPath();
+      ctx.moveTo(17, 18);
+      ctx.quadraticCurveTo(23, 23, 27, 26);
+      ctx.quadraticCurveTo(22, 33, 14, 33);
+      ctx.stroke();
+
+      // Peak
+      ctx.strokeStyle = '#38bdf8';
+      ctx.beginPath();
+      ctx.arc(20, 20, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#22d3ee';
+      ctx.fill();
+
+      ctx.restore();
+    }
+
+    const ROUTINES = {
+      "Push": [
+        { name: "Incline DB. Press", muscle: "Upper Chest" },
+        { name: "Cable Lat Raise", muscle: "Side Delts" },
+        { name: "Machine Press (CL)", muscle: "Chest" },
+        { name: "Overhead Tri. Ext. Bar", muscle: "Triceps" },
+        { name: "Tri. Pushdown Bar", muscle: "Triceps" },
+        { name: "Pec Fly (Upper/Lower)", muscle: "Chest" }
+      ],
+      "Pull": [
+        { name: "Machine Pullovers", muscle: "Lats" },
+        { name: "Wide Grip Row", muscle: "Upper Back" },
+        { name: "Close grip Machine row", muscle: "Lats" },
+        { name: "Cable Rear delt flys", muscle: "Rear Delts" },
+        { name: "Shrugs", muscle: "Traps" },
+        { name: "Bayesian Curl", muscle: "Biceps" },
+        { name: "Hammer/Preacher Curl", muscle: "Biceps" }
+      ],
+      "Legs": [
+        { name: "Hack Squat", muscle: "Quads" },
+        { name: "Seated Hamstring Curl", muscle: "Hamstrings" },
+        { name: "Leg Extension", muscle: "Quads" },
+        { name: "Hip Adductor", muscle: "Adductors" },
+        { name: "Hip Thrust", muscle: "Glutes" },
+        { name: "Bayesian Curl", muscle: "Biceps" },
+        { name: "Standing Calf Raise", muscle: "Calves" }
+      ],
+      "Arm-Shoulder": [
+        { name: "Machine Shoulder Press", muscle: "Front Delts" },
+        { name: "Bayesian Curl", muscle: "Biceps" },
+        { name: "Cable Lateral Raise", muscle: "Side Delts" },
+        { name: "Overhead Triceps Extension", muscle: "Triceps" },
+        { name: "Preacher Curl", muscle: "Biceps" },
+        { name: "Triceps Pushdown", muscle: "Triceps" }
+      ]
+    };
+
+    let currentSplit = "Push";
+    let logs = JSON.parse(localStorage.getItem("iron_logs") || "[]");
+    let activeSessionSets = JSON.parse(localStorage.getItem("iron_active_session") || "[]");
+    let userProfile = JSON.parse(localStorage.getItem("iron_profile") || '{"weight": 70, "height": 175}');
+    let restTimerInterval = null;
+    let restTimeRemaining = 0;
+
+    function init() {
+      const cv = document.getElementById('logo-canvas');
+      if (cv) {
+        drawNeonBicep(cv);
+        const dataUrl = cv.toDataURL('image/png');
+        document.getElementById('app-favicon').href = dataUrl;
+        document.getElementById('app-apple-icon').href = dataUrl;
+      }
+
+      renderSplitButtons();
+      populateExerciseSelect();
+      updateProfileDisplay();
+      renderExerciseDetails();
+      renderActiveSession();
+      populateHistoryFilter();
+    }
+
+    function switchTab(tabId) {
+      ['log', 'history', 'analytics', 'profile'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hidden');
+        const navEl = document.getElementById(`nav-${t}`);
+        navEl.className = "flex flex-col items-center gap-1 text-slate-400 py-1.5 px-4 rounded-2xl";
+      });
+      
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      const activeNav = document.getElementById(`nav-${tabId}`);
+      activeNav.className = "flex flex-col items-center gap-1 text-purple-300 bg-purple-950/60 border border-purple-500/30 rounded-2xl py-1.5 px-4";
+
+      if (tabId === 'history') {
+        renderPastWorkouts();
+        renderHistory();
+      }
+      if (tabId === 'analytics') renderAnalytics();
+      if (tabId === 'log') {
+        renderExerciseDetails();
+        renderActiveSession();
+      }
+    }
+
+    function renderSplitButtons() {
+      const container = document.getElementById('split-buttons');
+      container.innerHTML = Object.keys(ROUTINES).map(split => `
+        <button onclick="setSplit('${split}')" class="py-2.5 px-3 text-xs font-extrabold rounded-2xl transition ${
+          currentSplit === split 
+            ? 'glass-card text-purple-200 border border-purple-500/50 shadow-md' 
+            : 'glass-well text-slate-400'
+        }">${split}</button>
+      `).join('');
+    }
+
+    function setSplit(split) {
+      currentSplit = split;
+      renderSplitButtons();
+      populateExerciseSelect();
+      renderExerciseDetails();
+    }
+
+    function populateExerciseSelect() {
+      const select = document.getElementById('exercise-select');
+      const exercises = ROUTINES[currentSplit];
+      select.innerHTML = exercises.map(ex => `<option value="${ex.name}" class="bg-[#05050a] text-slate-200">${ex.name}</option>`).join('');
+    }
+
+    function getSelectedExerciseObj() {
+      const exName = document.getElementById('exercise-select').value;
+      for (const split in ROUTINES) {
+        const found = ROUTINES[split].find(e => e.name === exName);
+        if (found) return found;
+      }
+      return { name: exName, muscle: "Other" };
+    }
+
+    function renderExerciseDetails() {
+      const ex = getSelectedExerciseObj();
+      document.getElementById('target-muscle-badge').innerText = ex.muscle;
+
+      const allSets = [...logs, ...activeSessionSets];
+      const exerciseLogs = allSets.filter(l => l.exercise === ex.name);
+      const prevDisplay = document.getElementById('prev-log-display');
+      const ratingBadge = document.getElementById('lift-rating-badge');
+
+      if (exerciseLogs.length === 0) {
+        prevDisplay.innerHTML = `<span class="text-slate-500 italic">No logged lifts for this exercise.</span>`;
+        ratingBadge.innerText = "Rating: --";
+        return;
+      }
+
+      const latestDate = exerciseLogs[exerciseLogs.length - 1].date;
+      const latestSessionSets = exerciseLogs.filter(l => l.date === latestDate);
+      prevDisplay.innerHTML = `<span class="text-cyan-400 font-bold">${latestDate}:</span> ` + latestSessionSets.map((s, i) => `S${i+1}: <strong>${s.weight}kg × ${s.reps}</strong>`).join(', ');
+
+      let maxE1RM = 0;
+      exerciseLogs.forEach(s => {
+        const e1rm = s.weight * (1 + s.reps / 30);
+        if (e1rm > maxE1RM) maxE1RM = e1rm;
+      });
+
+      const bw = userProfile.weight || 70;
+      const ratio = (maxE1RM / bw).toFixed(2);
+      let tier = "Beginner";
+      if (ratio >= 1.5) tier = "Advanced";
+      else if (ratio >= 1.1) tier = "Intermediate";
+      else if (ratio >= 0.75) tier = "Novice";
+
+      ratingBadge.innerText = `Rating: ${tier} (${ratio}x BW)`;
+    }
+
+    function adjustInput(id, delta) {
+      const el = document.getElementById(id);
+      let val = parseFloat(el.value) || 0;
+      val = Math.max(0, val + delta);
+      el.value = (val % 1 !== 0) ? val.toFixed(1) : val;
+    }
+
+    function logCurrentSet() {
+      const weight = parseFloat(document.getElementById('input-weight').value);
+      const reps = parseInt(document.getElementById('input-reps').value, 10);
+      const ex = getSelectedExerciseObj();
+
+      if (isNaN(weight) || isNaN(reps) || reps <= 0) {
+        alert("Please enter a valid weight and reps count.");
+        return;
+      }
+
+      const now = new Date();
+      const today = now.toISOString().split('T')[0];
+      const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      const entry = {
+        id: Date.now() + Math.random(),
+        date: today,
+        time: timeStr,
+        split: currentSplit,
+        exercise: ex.name,
+        muscle: ex.muscle,
+        weight: weight,
+        reps: reps,
+        volume: weight * reps
+      };
+
+      activeSessionSets.push(entry);
+      localStorage.setItem("iron_active_session", JSON.stringify(activeSessionSets));
+
+      document.getElementById('input-reps').value = '';
+      renderExerciseDetails();
+      renderActiveSession();
+      startRestTimer(90);
+    }
+
+    function renderActiveSession() {
+      const list = document.getElementById('session-sets-list');
+      const finishBtnContainer = document.getElementById('finish-workout-container');
+      document.getElementById('session-count').innerText = `${activeSessionSets.length} sets`;
+
+      if (activeSessionSets.length === 0) {
+        list.innerHTML = `<p class="text-slate-500 italic text-center py-2.5">No active sets right now. Start logging above!</p>`;
+        finishBtnContainer.classList.add('hidden');
+        return;
+      }
+
+      finishBtnContainer.classList.remove('hidden');
+
+      list.innerHTML = activeSessionSets.slice().reverse().map(s => `
+        <div class="glass-card p-3 rounded-2xl flex justify-between items-center">
+          <div>
+            <div class="font-extrabold text-slate-200 text-xs">${s.exercise}</div>
+            <div class="text-[9px] text-purple-300 font-bold uppercase">${s.muscle} • ${s.split}</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span class="font-black text-sm text-cyan-300">${s.weight} kg × ${s.reps}</span>
+              <span class="text-slate-400 text-[9px] block font-bold uppercase">${s.volume.toLocaleString()} kg vol</span>
+            </div>
+            <button onclick="deleteActiveSet(${s.id})" class="text-rose-400 hover:text-rose-300 p-2 rounded-xl glass-well">
+              <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function deleteActiveSet(setId) {
+      activeSessionSets = activeSessionSets.filter(s => s.id !== setId);
+      localStorage.setItem("iron_active_session", JSON.stringify(activeSessionSets));
+      renderActiveSession();
+      renderExerciseDetails();
+    }
+
+    function finishWorkoutSession() {
+      if (activeSessionSets.length === 0) return;
+
+      const totalVol = activeSessionSets.reduce((acc, s) => acc + s.volume, 0);
+      const confirmMsg = `Complete workout?\n• ${activeSessionSets.length} Sets Logged\n• ${totalVol.toLocaleString()} kg Total Volume`;
+      if (!confirm(confirmMsg)) return;
+
+      logs = [...logs, ...activeSessionSets];
+      localStorage.setItem("iron_logs", JSON.stringify(logs));
+
+      activeSessionSets = [];
+      localStorage.removeItem("iron_active_session");
+
+      renderActiveSession();
+      renderExerciseDetails();
+      alert("Workout Completed & Saved to History!");
+    }
+
+    function switchHistorySubTab(tab) {
+      const workoutsBtn = document.getElementById('subtab-workouts-btn');
+      const overloadBtn = document.getElementById('subtab-overload-btn');
+      const workoutsView = document.getElementById('view-past-workouts');
+      const overloadView = document.getElementById('view-overload-timeline');
+
+      if (tab === 'workouts') {
+        workoutsBtn.className = "py-2 rounded-xl text-xs font-extrabold bg-purple-950/80 text-purple-200 border border-purple-500/40";
+        overloadBtn.className = "py-2 rounded-xl text-xs font-bold text-slate-400";
+        workoutsView.classList.remove('hidden');
+        overloadView.classList.add('hidden');
+        renderPastWorkouts();
+      } else {
+        overloadBtn.className = "py-2 rounded-xl text-xs font-extrabold bg-purple-950/80 text-purple-200 border border-purple-500/40";
+        workoutsBtn.className = "py-2 rounded-xl text-xs font-bold text-slate-400";
+        overloadView.classList.remove('hidden');
+        workoutsView.classList.add('hidden');
+        renderHistory();
+      }
+    }
+
+    function renderPastWorkouts() {
+      const container = document.getElementById('past-workouts-list');
+      if (logs.length === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-500 py-6 text-center">No completed workouts yet.</p>`;
+        return;
+      }
+
+      const sessionsByDate = {};
+      logs.forEach(s => {
+        if (!sessionsByDate[s.date]) sessionsByDate[s.date] = [];
+        sessionsByDate[s.date].push(s);
+      });
+
+      const dates = Object.keys(sessionsByDate).sort().reverse();
+
+      container.innerHTML = dates.map(date => {
+        const sets = sessionsByDate[date];
+        const dayVol = sets.reduce((acc, s) => acc + s.volume, 0);
+        const splitTag = sets[0].split || "Routine";
+
+        return `
+          <div class="glass-card rounded-3xl p-4 space-y-3">
+            <div class="flex justify-between items-center cursor-pointer" onclick="toggleSessionExpand('${date}')">
+              <div>
+                <span class="text-xs font-black text-slate-200">${date}</span>
+                <span class="text-[9px] font-bold text-purple-300 uppercase px-2 py-0.5 rounded-full bg-purple-950/60 ml-1.5 border border-purple-500/30">${splitTag}</span>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-extrabold text-cyan-400">${dayVol.toLocaleString()} kg</span>
+                <span class="text-[10px] text-slate-400 block font-semibold">${sets.length} sets ▾</span>
+              </div>
+            </div>
+
+            <div id="session-detail-${date}" class="space-y-2 pt-2 border-t border-white/5">
+              ${sets.map((s) => `
+                <div class="flex justify-between items-center glass-well px-3 py-2 rounded-2xl text-xs">
+                  <div>
+                    <span class="font-bold text-slate-200 block">${s.exercise}</span>
+                    <span class="text-[9px] text-slate-400 font-semibold uppercase">${s.muscle}</span>
+                  </div>
+                  <div class="flex items-center gap-2.5">
+                    <span class="font-black text-cyan-300">${s.weight} kg × ${s.reps}</span>
+                    <button onclick="deleteArchivedSet(${s.id})" class="text-rose-400 hover:text-rose-300 p-1 rounded-lg bg-rose-950/30 border border-rose-800/30">
+                      <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              `).join('')}
+              <div class="pt-1 flex justify-end">
+                <button onclick="deleteEntireDay('${date}')" class="text-[10px] text-rose-400 font-bold uppercase tracking-wider py-1 px-2.5 rounded-lg border border-rose-900/40 hover:bg-rose-950/30">
+                  Delete Session
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleSessionExpand(date) {
+      const el = document.getElementById(`session-detail-${date}`);
+      if (el) el.classList.toggle('hidden');
+    }
+
+    function deleteArchivedSet(setId) {
+      if (!confirm("Delete this set from history?")) return;
+      logs = logs.filter(l => l.id !== setId);
+      localStorage.setItem("iron_logs", JSON.stringify(logs));
+      renderPastWorkouts();
+      renderHistory();
+      renderAnalytics();
+      renderExerciseDetails();
+    }
+
+    function deleteEntireDay(date) {
+      if (!confirm(`Delete all workout logs for ${date}?`)) return;
+      logs = logs.filter(l => l.date !== date);
+      localStorage.setItem("iron_logs", JSON.stringify(logs));
+      renderPastWorkouts();
+      renderHistory();
+      renderAnalytics();
+      renderExerciseDetails();
+    }
+
+    function populateHistoryFilter() {
+      const select = document.getElementById('history-filter');
+      const allExercises = [];
+      Object.values(ROUTINES).forEach(list => list.forEach(item => {
+        if (!allExercises.includes(item.name)) allExercises.push(item.name);
+      }));
+      select.innerHTML = allExercises.map(e => `<option value="${e}" class="bg-[#05050a] text-slate-200">${e}</option>`).join('');
+    }
+
+    function renderHistory() {
+      const selected = document.getElementById('history-filter').value;
+      const historyList = logs.filter(l => l.exercise === selected);
+      const container = document.getElementById('history-timeline');
+
+      if (historyList.length === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-500 py-4 text-center">No logs found for ${selected}.</p>`;
+        return;
+      }
+
+      const grouped = {};
+      historyList.forEach(s => {
+        if (!grouped[s.date]) grouped[s.date] = [];
+        grouped[s.date].push(s);
+      });
+
+      const dates = Object.keys(grouped).sort();
+      let html = '';
+      let prevBest1RM = 0;
+
+      dates.forEach(d => {
+        const sets = grouped[d];
+        const dayVol = sets.reduce((acc, s) => acc + s.volume, 0);
+        const dayMax1RM = Math.max(...sets.map(s => s.weight * (1 + s.reps / 30)));
+
+        let overloadNotice = '';
+        if (prevBest1RM > 0) {
+          if (dayMax1RM > prevBest1RM) {
+            overloadNotice = `<span class="text-cyan-300 font-black tracking-widest text-[9px] bg-cyan-950/60 px-2.5 py-0.5 rounded-full border border-cyan-500/30 ml-1.5 uppercase">▲ OVERLOAD</span>`;
+          } else if (dayMax1RM < prevBest1RM) {
+            overloadNotice = `<span class="text-rose-400 font-bold text-[9px] ml-1.5">▼ Drop</span>`;
+          }
+        }
+        prevBest1RM = dayMax1RM;
+
+        html += `
+          <div class="glass-card p-4 rounded-3xl space-y-2">
+            <div class="flex justify-between items-center border-b border-white/5 pb-2">
+              <span class="font-extrabold text-slate-200 text-xs">${d} ${overloadNotice}</span>
+              <span class="text-cyan-400 font-extrabold text-xs">${dayVol.toLocaleString()} kg</span>
+            </div>
+            <div class="space-y-1.5 pt-0.5">
+              ${sets.map((s, idx) => `
+                <div class="flex justify-between items-center glass-well px-3 py-1.5 rounded-xl text-xs">
+                  <span class="text-slate-400">Set ${idx+1}: <strong class="text-slate-200">${s.weight}kg × ${s.reps}</strong></span>
+                  <span class="text-slate-500 text-[10px] font-bold">${s.volume} kg vol</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function renderAnalytics() {
+      const allSets = [...logs, ...activeSessionSets];
+      const totalVol = allSets.reduce((acc, s) => acc + s.volume, 0);
+      document.getElementById('stat-total-volume').innerText = `${totalVol.toLocaleString()} kg`;
+      document.getElementById('stat-total-sets').innerText = allSets.length;
+
+      const muscleVol = {};
+      allSets.forEach(s => {
+        muscleVol[s.muscle] = (muscleVol[s.muscle] || 0) + s.volume;
+      });
+
+      const sortedMuscles = Object.entries(muscleVol).sort((a, b) => b[1] - a[1]);
+      const breakdownEl = document.getElementById('muscle-breakdown');
+
+      if (sortedMuscles.length === 0) {
+        breakdownEl.innerHTML = `<p class="text-xs text-slate-500 py-4 text-center">Log workouts to see distribution.</p>`;
+        return;
+      }
+
+      const maxMVol = sortedMuscles[0][1] || 1;
+      breakdownEl.innerHTML = sortedMuscles.map(([muscle, vol]) => {
+        const pct = Math.round((vol / maxMVol) * 100);
+        return `
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs items-center">
+              <span class="font-bold text-slate-300">${muscle}</span>
+              <span class="text-cyan-400 font-bold">${vol.toLocaleString()} kg</span>
+            </div>
+            <div class="w-full glass-well rounded-full h-2.5 overflow-hidden p-[1.5px]">
+              <div class="bg-gradient-to-r from-purple-700 via-indigo-600 to-cyan-500 h-full rounded-full" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleTimerModal() {
+      document.getElementById('timer-modal').classList.toggle('hidden');
+    }
+
+    function startRestTimer(seconds) {
+      clearInterval(restTimerInterval);
+      restTimeRemaining = seconds;
+      updateTimerDisplay();
+      document.getElementById('timer-modal').classList.add('hidden');
+
+      restTimerInterval = setInterval(() => {
+        restTimeRemaining--;
+        updateTimerDisplay();
+        if (restTimeRemaining <= 0) {
+          clearInterval(restTimerInterval);
+          document.getElementById('timer-display').innerText = "DONE";
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const m = Math.floor(restTimeRemaining / 60);
+      const s = restTimeRemaining % 60;
+      const str = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+      document.getElementById('timer-display').innerText = str;
+      document.getElementById('modal-timer-countdown').innerText = str;
+    }
+
+    function exportData() {
+      const blob = new Blob([JSON.stringify({ logs, activeSessionSets, userProfile })], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `KenjiLifts_Backup_${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+    }
+
+    function importData(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        try {
+          const data = JSON.parse(event.target.result);
+          if (data.logs) logs = data.logs;
+          if (data.activeSessionSets) activeSessionSets = data.activeSessionSets;
+          if (data.userProfile) userProfile = data.userProfile;
+          localStorage.setItem("iron_logs", JSON.stringify(logs));
+          localStorage.setItem("iron_active_session", JSON.stringify(activeSessionSets));
+          localStorage.setItem("iron_profile", JSON.stringify(userProfile));
+          init();
+          alert("Backup restored!");
+        } catch (err) {
+          alert("Invalid backup file.");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function saveUserProfile() {
+      const w = parseFloat(document.getElementById('input-bw').value);
+      const h = parseFloat(document.getElementById('input-height').value);
+      if (w) userProfile.weight = w;
+      if (h) userProfile.height = h;
+      localStorage.setItem("iron_profile", JSON.stringify(userProfile));
+      updateProfileDisplay();
+      renderExerciseDetails();
+      alert("Biometrics Updated!");
+    }
+
+    function updateProfileDisplay() {
+      document.getElementById('user-stats-banner').innerText = `BW: ${userProfile.weight || '--'} kg | Ht: ${userProfile.height || '--'} cm`;
+      document.getElementById('input-bw').value = userProfile.weight || '';
+      document.getElementById('input-height').value = userProfile.height || '';
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>
