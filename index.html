@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#010103" />
+  <title>Kenji Lifts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Embedded Neon Flexing Bicep Icon for Phone Shortcuts, Favicon & Apple Touch -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='130' fill='%2305050a'/%3E%3Cpath d='M150 370 c-15-5 -28-18 -32-34 -3-11 -1-24 5-34 5-9 14-16 25-20 6-2 12-7 14-13 4-11 15-20 28-22 9-2 18 1 25 7 8 8 19 11 30 9 14-3 27-14 31-28 6-18 20-33 38-39 21-8 45-2 60 14 12 13 29 19 46 16 19-4 35-18 40-37 3-10 10-18 20-22 13-5 28-2 37 8 10 11 12 28 5 41 -6 11 -15 20 -26 25 -10 4 -16 14 -16 25 0 16 9 30 23 37 13 6 22 19 23 34 1 18 -11 34 -28 39 -11 3 -20 12 -23 23 -4 14 -16 24 -31 25 -12 1 -23-5 -30-14 -7-9 -18-14 -29-14 -14 0 -27 8 -33 20 -7 13 -20 21 -35 21 -14 0 -27-7 -34-19 -6-10 -17-17 -29-17 -14 0 -27 8 -33 20 -7 14 -22 22 -38 21 -13-1 -25-9 -31-21z' fill='none' stroke='%23a855f7' stroke-width='18' stroke-linecap='round' stroke-linejoin='round' filter='drop-shadow(0 0 16px %2322d3ee)'/%3E%3Cpath d='M230 270 C240 230 275 205 315 215 C345 222 365 245 370 275' fill='none' stroke='%2322d3ee' stroke-width='22' stroke-linecap='round'/%3E%3Cpath d='M370 275 C375 320 345 355 300 355 C260 355 230 330 220 290' fill='none' stroke='%23c084fc' stroke-width='22' stroke-linecap='round'/%3E%3Cpath d='M315 215 C335 190 375 190 395 215' fill='none' stroke='%2338bdf8' stroke-width='20' stroke-linecap='round'/%3E%3Ccircle cx='360' cy='245' r='12' fill='%2322d3ee'/%3E%3C/svg%3E" />
+  
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='130' fill='%2305050a'/%3E%3Cpath d='M230 270 C240 230 275 205 315 215 C345 222 365 245 370 275' fill='none' stroke='%2322d3ee' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M370 275 C375 320 345 355 300 355 C260 355 230 330 220 290' fill='none' stroke='%23c084fc' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M315 215 C335 190 375 190 395 215' fill='none' stroke='%2338bdf8' stroke-width='22' stroke-linecap='round'/%3E%3Ccircle cx='360' cy='245' r='14' fill='%2322d3ee'/%3E%3C/svg%3E" />
+
+  <!-- Web App Manifest for Android PWA Shortcut Generation -->
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Kenji%20Lifts%22%2C%22short_name%22%3A%22KenjiLifts%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23010103%22%2C%22theme_color%22%3A%22%23010103%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage%2Fsvg%2Bxml%2C%253Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20512%20512'%253E%253Crect%20width%3D'512'%20height%3D'512'%20rx%3D'130'%20fill%3D'%252305050a'%2F%253E%253Cpath%20d%3D'M230%20270%20C240%20230%20275%20205%20315%20215%20C345%20222%20365%20245%20370%20275'%20fill%3D'none'%20stroke%3D'%252322d3ee'%20stroke-width%3D'24'%20stroke-linecap%3D'round'%2F%253E%253Cpath%20d%3D'M370%20275%20C375%20320%20345%20355%20300%20355%20C260%20355%20230%20330%20220%20290'%20fill%3D'none'%20stroke%3D'%2523c084fc'%20stroke-width%3D'24'%20stroke-linecap%3D'round'%2F%253E%253Cpath%20d%3D'M315%20215%20C335%20190%20375%20190%20395%20215'%20fill%3D'none'%20stroke%3D'%252338bdf8'%20stroke-width%3D'22'%20stroke-linecap%3D'round'%2F%253E%253Ccircle%20cx%3D'360'%20cy%3D'245'%20r%3D'14'%20fill%3D'%252322d3ee'%2F%253E%253C%2Fsvg%253E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fsvg%2Bxml%22%2C%22purpose%22%3A%22any%20maskable%22%7D%5D%7D" />
+
+  <style>
+    :root {
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body {
+      background-color: #010103;
+      color: #e2e8f0;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Moody Liquid Aurora Background */
+    .aurora-bg {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      background: #010103;
+    }
+
+    .morph-blob {
+      position: absolute;
+      filter: blur(85px);
+      opacity: 0.28;
+      will-change: transform, border-radius;
+    }
+
+    .blob-1 {
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, #581c87 0%, #3b0764 55%, transparent 80%);
+      top: 2%;
+      right: -80px;
+      animation: liquidMorph1 16s ease-in-out infinite alternate;
+    }
+
+    .blob-2 {
+      width: 380px;
+      height: 340px;
+      background: radial-gradient(circle, #0e7490 0%, #1e1b4b 65%, transparent 85%);
+      top: 38%;
+      left: -110px;
+      animation: liquidMorph2 20s ease-in-out infinite alternate;
+    }
+
+    .blob-3 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #701a75 0%, #311042 60%, transparent 80%);
+      bottom: 5%;
+      right: -60px;
+      animation: liquidMorph1 22s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes liquidMorph1 {
+      0% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate(0, 0) rotate(0deg) scale(1);
+      }
+      50% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate(-35px, 40px) rotate(40deg) scale(1.08);
+      }
+      100% {
+        border-radius: 35% 65% 31% 69% / 57% 59% 41% 43%;
+        transform: translate(20px, -25px) rotate(80deg) scale(0.95);
+      }
+    }
+
+    @keyframes liquidMorph2 {
+      0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: translate(0, 0) rotate(0deg) scale(1);
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: translate(45px, -30px) rotate(-35deg) scale(1.12);
+      }
+      100% {
+        border-radius: 55% 45% 65% 35% / 40% 65% 35% 60%;
+        transform: translate(-15px, 35px) rotate(-70deg) scale(0.96);
+      }
+    }
+
+    /* Smoked Obsidian Frosted Glass Card */
+    .glass-card {
+      position: relative;
+      background: linear-gradient(
+        135deg,
+        rgba(18, 20, 32, 0.72) 0%,
+        rgba(9, 10, 16, 0.84) 100%
+      );
+      backdrop-filter: blur(40px) saturate(160%);
+      -webkit-backdrop-filter: blur(40px) saturate(160%);
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      border-left: 1px solid rgba(255, 255, 255, 0.09);
+      border-right: 1px solid rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow:
+        0 24px 50px -12px rgba(0, 0, 0, 0.9),
+        inset 0 1px 0.5px 0 rgba(255, 255, 255, 0.14);
+      transition: transform 0.35s var(--spring), border-radius 0.35s var(--smooth), box-shadow 0.35s var(--smooth), border-color 0.3s ease;
+    }
+
+    /* Recessed Wells */
+    .glass-well {
+      background: rgba(3, 4, 8, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.04);
+      transition: all 0.3s var(--smooth);
+    }
+
+    /* Floating Bars */
+    .glass-bar {
+      background: rgba(8, 9, 15, 0.82);
+      backdrop-filter: blur(36px) saturate(170%);
+      -webkit-backdrop-filter: blur(36px) saturate(170%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.95),
+        inset 0 1px 0.5px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-moody-primary {
+      background: linear-gradient(135deg, rgba(88, 28, 135, 0.55) 0%, rgba(15, 23, 42, 0.85) 50%, rgba(14, 116, 144, 0.55) 100%);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      box-shadow: 
+        0 12px 30px -6px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(139, 92, 246, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18);
+    }
+
+    .morph-btn {
+      transition: transform 0.3s var(--spring), border-radius 0.3s var(--smooth), background 0.3s ease, border-color 0.3s ease;
+    }
+    .morph-btn:active {
+      transform: scale(0.93);
+      border-radius: 22px;
+    }
+
+    .stepper-btn {
+      transition: transform 0.28s var(--spring), border-radius 0.28s var(--smooth), background 0.2s ease;
+    }
+    .stepper-btn:active {
+      transform: scale(0.82);
+      border-radius: 50%;
+      background: rgba(168, 85, 247, 0.35);
+      border-color: rgba(34, 211, 238, 0.5);
+      color: #ffffff;
+    }
+
+    .tab-pane {
+      transition: opacity 0.35s var(--smooth), transform 0.38s var(--spring);
+    }
+
+    @keyframes setMorphIn {
+      0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.95);
+        border-radius: 34px;
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        border-radius: 18px;
+      }
+    }
+    .animate-set-in {
+      animation: setMorphIn 0.4s var(--spring) forwards;
+    }
+
+    @keyframes overloadPulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.12), inset 0 1px 0.5px rgba(255, 255, 255, 0.15); }
+      50% { box-shadow: 0 0 25px rgba(168, 85, 247, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.25); }
+    }
+    .overload-glow {
+      animation: overloadPulse 3.2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="pb-32">
+
+  <!-- Moody Aurora Background -->
+  <div class="aurora-bg">
+    <div class="morph-blob blob-1"></div>
+    <div class="morph-blob blob-2"></div>
+    <div class="morph-blob blob-3"></div>
+  </div>
+
+  <!-- Sticky Frosted Header with Neon Flexing Bicep -->
+  <header class="glass-bar sticky top-0 z-40 px-4 py-3.5 flex justify-between items-center border-t-0 border-x-0">
+    <div class="flex items-center gap-3">
+      
+      <!-- Neon Flexing Bicep Badge -->
+      <div class="w-10 h-10 rounded-2xl glass-card flex items-center justify-center border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.25)]">
+        <svg class="w-6 h-6 text-purple-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Stylized flexing bicep & arm contour -->
+          <path d="M4 16c.8-2.5 3-4 6-4 1.5 0 2.5.5 3.5 1.5 1.5-2.2 4-3.5 7-3.5 1 0 2 .2 2.8.6" stroke="#c084fc"/>
+          <path d="M7 17.5c2.5 1.5 5 1.5 8 0 1.5-.7 3-1.8 4.2-3.2.8-1 1.8-1.8 2.8-2.3" stroke="#22d3ee"/>
+          <!-- Flexed Bicep Peak Arc -->
+          <path d="M12.5 11c1-1.8 2.8-3 5-3 2 0 3.8 1 4.5 2.5" stroke="#38bdf8" stroke-width="2.2"/>
+          <circle cx="16.5" cy="11.5" r="1.5" fill="#22d3ee" stroke="none"/>
+        </svg>
+      </div>
+
+      <div>
+        <h1 class="text-base
